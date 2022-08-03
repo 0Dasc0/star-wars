@@ -1,0 +1,15 @@
+.footer {
+    background-color: whitesmoke;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.contenedorf {
+    margin: auto;
+}
+
+.social {
+    margin: 1%;
+}
