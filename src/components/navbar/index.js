@@ -22,7 +22,7 @@ const Navbarc = ({Navbarc}) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Personajes</Nav.Link>
+            <Nav.Link href="/personajes">Personajes</Nav.Link>
             <Nav.Link href="#link">Planetas</Nav.Link>
           
           </Nav>

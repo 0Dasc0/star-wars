@@ -4,6 +4,8 @@ import Slider from "../../components/slider/index"
 import Cards from "../../components/navegar/index"
 import Footer from '../../components/footer/index'
 
+import { useperson } from '../../Hooks/userPerson'
+
 import f1 from '../../assets/images/1.png'
 import f2 from '../../assets/images/2.png'
 
