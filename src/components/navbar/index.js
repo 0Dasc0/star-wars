@@ -12,7 +12,7 @@ const Navbarc = ({Navbarc}) => {
     <>
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home"><img
+        <Navbar.Brand href="/"><img
                 alt=""
                 src={logo}
                 width="80"
@@ -23,7 +23,7 @@ const Navbarc = ({Navbarc}) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/personajes">Personajes</Nav.Link>
-            <Nav.Link href="#link">Planetas</Nav.Link>
+            <Nav.Link href="/planetas">Planetas</Nav.Link>
           
           </Nav>
         </Navbar.Collapse>
