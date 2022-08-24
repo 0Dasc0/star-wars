@@ -12,7 +12,7 @@ const Navbarc = ({Navbarc}) => {
     <>
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/"><img
+        <Navbar.Brand href="/home"><img
                 alt=""
                 src={logo}
                 width="80"

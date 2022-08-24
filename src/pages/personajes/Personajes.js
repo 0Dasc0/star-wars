@@ -18,6 +18,12 @@ export const Personajes = () => {
     getAllPerson(Contador);
     console.log(dataPeople);
   }, [dataPeople]);
+
+
+var CONTADOR
+
+
+
   return (<>
    <Navbarc/>
  
@@ -75,6 +81,9 @@ export const Personajes = () => {
     </ListGroup.Item>
      
     </ListGroup>
+    <br></br>
+
+    <Button variant="primary" href={`/detalles/${chars.name}`}>Ver mas</Button>
       </Card.Body>
     </Card>
     
