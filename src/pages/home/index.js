@@ -1,10 +1,10 @@
 import React from "react";
-import Navbarc from "../../components/navbar/index"
+
 import Slider from "../../components/slider/index"
 import Cards from "../../components/navegar/index"
-import Footer from '../../components/footer/index'
 
-import { useperson } from '../../Hooks/userPerson'
+
+import { useperson } from '../../Hooks/UsePerson'
 
 import f1 from '../../assets/images/1.png'
 import f2 from '../../assets/images/2.png'
@@ -13,7 +13,7 @@ const Home = ({Home}) => {
     return (
 <>
     
-    <Navbarc/>
+
 
     <Slider/>
 
@@ -31,7 +31,7 @@ const Home = ({Home}) => {
    />
    </div>
 
-   <Footer/>
+
 
     </>
     )

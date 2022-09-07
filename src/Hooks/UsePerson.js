@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const usePerson = () => {
+export const UsePerson = () => {
 
   const [dataPeople, setDataPeople] = useState([]);
 
@@ -42,26 +42,25 @@ export const usePerson = () => {
     }
   };
 
-  const getOnePerson = async(id, state) => {
-    try {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
+  // const getOnePerson = async(id, state) => {
+  //   try {
+  //   var requestOptions = {
+  //     method: "GET",
+  //     redirect: "follow",
+  //   };
 
-    await fetch(`https://swapi.dev/api/people/1`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => setDataPeople(result.results))
-      .catch((error) => console.log("error", error));
+  //   await fetch(`https://swapi.dev/api/people/1`, requestOptions)
+  //     .then((response) => response.json())
+  //     .then((result) => setDataPeople(result.results))
+  //     .catch((error) => console.log("error", error));
   
-    }  catch (error) {
-      console.log(error);
-    }
-  };
+  //   }  catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return {
     getAllPerson,
-    getOnePerson,
     dataPeople,
     Contador,
     reducir,

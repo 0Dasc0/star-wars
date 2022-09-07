@@ -1,0 +1,32 @@
+* {
+    text-align: justify;
+}
+
+.title {
+    color: white;
+}
+
+.title2 {
+    color: #ffff00bb;
+}
+
+.Card {
+  
+}
+
+.to {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    align-items: center;
+    width: 60%;
+}
+
+.subcolumns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lo {
+    width: 100%;
+}
