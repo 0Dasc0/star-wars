@@ -18,7 +18,7 @@ const CardApp = () =>{
     <div>
 
       
-      <h1 style={{textAlign:"center", textShadow:"0 0 4px #FFE919", fontWeight:"bolder", fontSize:"xxx-large"}}>Listado de Personajes</h1>
+      <h1 style={{textAlign:"center", textShadow:"0 0 4px #FFE919", fontWeight:"bolder", fontSize:"xxx-large"}}>Listado de Planetas</h1>
       <div className="d-flex justify-content-center flex-wrap container-fluid">
       {dataPlanet.map((planets) =>(
           <TarjetaP
@@ -27,6 +27,10 @@ const CardApp = () =>{
           terreno={planets.terrain}
           creado={planets.created}
           f3={f3}
+          rotacionp={planets.rotation_period}
+          diametro={planets.diameter}
+          aguasup={planets.surface_water}
+          gravedad={planets.gravity}
           keyName={planets.name}
           num={Contador}
           />

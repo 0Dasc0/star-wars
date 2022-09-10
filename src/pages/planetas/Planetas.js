@@ -14,7 +14,11 @@ export const TarjetaP = ({
   clima,
   terreno,
   creado,
-  f3,
+  rotacionp,
+  f3, 
+  diametro,
+  aguasup,
+  gravedad,
   keyName,
   num, 
 }) => {
@@ -39,10 +43,7 @@ export const TarjetaP = ({
 
       <Card.Body>
        
-      <ListGroup.Item className="lista">
-    <strong>Terreno:</strong>
-        {terreno} 
-    </ListGroup.Item>
+  <ListGroup>
 
     <ListGroup.Item className="lista">
     <strong>Tipo clima:</strong>
@@ -54,8 +55,34 @@ export const TarjetaP = ({
         {creado}
     </ListGroup.Item>
 
+    <ListGroup.Item className="lista">
+    <strong>Terreno:</strong>
+        {terreno} 
+    </ListGroup.Item>
 
-    <Link to={`/detalles/${nombre}/${num}`} key={keyName}>
+    <ListGroup.Item className="lista">
+    <strong>Periodo rotacion:</strong>
+        {rotacionp} 
+    </ListGroup.Item>
+
+    <ListGroup.Item className="lista">
+    <strong>Diametro:</strong>
+        {diametro} 
+    </ListGroup.Item>
+
+    <ListGroup.Item className="lista">
+    <strong>Superficie acuatica:</strong>
+        {aguasup} 
+    </ListGroup.Item>
+
+    <ListGroup.Item className="lista">
+    <strong>Gravedad:</strong>
+        {gravedad} 
+    </ListGroup.Item>
+
+    </ListGroup>
+
+    <Link to={`/detallesp/${nombre}/${num}`} key={keyName}>
     <Button variant="primary"><p>Ver mas</p>{nombre}</Button>
     </Link>
       </Card.Body>

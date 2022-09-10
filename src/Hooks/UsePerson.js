@@ -3,6 +3,7 @@ import { useState } from "react";
 export const UsePerson = () => {
 
   const [dataPeople, setDataPeople] = useState([]);
+  const [DataDetalle, setDataDetalle] = useState([]);
 
   const [Contador, setContador] = useState(1);
 
@@ -42,7 +43,26 @@ export const UsePerson = () => {
     }
   };
 
-  // const getOnePerson = async(id, state) => {
+
+  const getDetallePersonaje = async (urlPersona)=>{
+    try {
+      var requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+
+      await fetch(
+        urlPersona,
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => setDataDetalle(result))
+        .catch((error) => console.log("error", error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   //   try {
   //   var requestOptions = {
   //     method: "GET",
@@ -64,6 +84,9 @@ export const UsePerson = () => {
     dataPeople,
     Contador,
     reducir,
-    aumentar
+    aumentar,
+    getDetallePersonaje,
+    DataDetalle
+
   };
 };

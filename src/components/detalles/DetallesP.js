@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { useParams } from 'react-router'
-import { UsePerson } from '../../Hooks/UsePerson'
+import { UsePlanet } from '../../Hooks/UsePlanet'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { ListGroup } from "react-bootstrap";
@@ -9,7 +9,7 @@ import './detalles.css';
 
 
 const Detalles = () => {
-  const { getAllPerson , dataPeople } = UsePerson();
+  const { getAllPlanet , dataPlanet } = UsePlanet();
 
 
   const params = useParams();
@@ -21,10 +21,10 @@ const Detalles = () => {
   var numero = mapeo2[0];
 
   useEffect(() => {
-    getAllPerson(numero);
+    getAllPlanet(numero);
   }, []);
 
-  const filtro = dataPeople.filter((filtrar) => filtrar.name === nombre);
+  const filtro = dataPlanet.filter((filtrar) => filtrar.name === nombre);
 
   // const mapeo3 = filtro.map((per) => per.homeworld);
   // var homeworld = mapeo3 [0];
@@ -36,7 +36,7 @@ const Detalles = () => {
     <>
 
     
-      <Button variant="primary" href="/personajes">Volver</Button>
+      <Button variant="primary" href="/planetas">Volver</Button>
       
       <div className='to'>
       
@@ -74,31 +74,28 @@ const Detalles = () => {
         }}
         className="m2 text-center">
 
-        {filtro.map((persona) => (
-              <div key={persona.name}>
-              <h3 className="title">DETALLES DEL PERSONAJE </h3>
+        {filtro.map((planets) => (
+              <div key={planets.name}>
+              <h3 className="title">DETALLES DEL PLANETA </h3>
               <div className='subcolumns' >
                 <div >
               <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Nacimiento: </b> <b className="title"> {persona.birth_year}</b></ListGroup.Item><br></br>
+            background: "black",}}><b className="title2" >Clima: </b> <b className="title"> {planets.climate}</b></ListGroup.Item><br></br>
             <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Editado: </b> <b className="title"> {persona.edited}</b></ListGroup.Item><br></br>
+            background: "black",}}><b className="title2" >Terreno: </b> <b className="title">{planets.terrain}</b></ListGroup.Item><br></br>
             <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Creado: </b> <b className="title"> {persona.created}</b></ListGroup.Item><br></br>
-              <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Color Ojos: </b> <b className="title"> {persona.eye_color}</b></ListGroup.Item><br></br>
+            background: "black",}}><b className="title2" >Creado: </b> <b className="title">{planets.created}</b></ListGroup.Item><br></br>
+                      <ListGroup.Item className="tabla" style={{
+            background: "black",}}><b className="title2" >Periodo de rotacion: </b> <b className="title">{planets.rotation_period}</b></ListGroup.Item><br></br>
             </div>
             <div>
+  
             <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Genero: </b> <b className="title"> {persona.gender}</b></ListGroup.Item><br></br>
-            <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Color Cabello: </b> <b className="title"> {persona.hair_color}</b></ListGroup.Item><br></br>
+            background: "black",}}><b className="title2" >Diametro: </b> <b className="title"> {planets.diameter}</b></ListGroup.Item><br></br>
               <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Estatura: </b> <b className="title"> {persona.height}</b></ListGroup.Item><br></br>
+            background: "black",}}><b className="title2" >Superficie acuatica: </b> <b className="title">{planets.surface_water}</b></ListGroup.Item><br></br>
             <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Peso: </b> <b className="title"> {persona.mass}</b></ListGroup.Item><br></br>
-            <ListGroup.Item className="tabla" style={{
-            background: "black",}}><b className="title2" >Color Piel: </b> <b className="title"> {persona.skin_color}</b></ListGroup.Item><br></br>
+            background: "black",}}><b className="title2" >Gravedad: </b> <b className="title">{planets.gravity}</b></ListGroup.Item><br></br>
             </div>
             </div>
             </div>        
