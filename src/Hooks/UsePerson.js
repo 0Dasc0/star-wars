@@ -4,6 +4,7 @@ export const UsePerson = () => {
 
   const [dataPeople, setDataPeople] = useState([]);
   const [DataDetalle, setDataDetalle] = useState([]);
+  const [DataPeli, setDataPeli] = useState([]);
 
   const [Contador, setContador] = useState(1);
 
@@ -44,7 +45,7 @@ export const UsePerson = () => {
   };
 
 
-  const getDetallePersonaje = async (urlPersona)=>{
+  const getDatallePersonaje = async (urlPersona)=>{
     try {
       var requestOptions = {
         method: "GET",
@@ -62,6 +63,26 @@ export const UsePerson = () => {
       console.log(error);
     }
   };
+
+
+  const getDataPeli = async (urlPeli)=>{
+    try {
+      var requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+
+      await fetch (
+        urlPeli,
+        requestOptions
+      )
+      .then((response) => response.json())
+      .then((result) => setDataPeli(result))
+      .catch((error) => console.log("error", error));
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   //   try {
   //   var requestOptions = {
@@ -85,8 +106,10 @@ export const UsePerson = () => {
     Contador,
     reducir,
     aumentar,
-    getDetallePersonaje,
-    DataDetalle
+    getDatallePersonaje,
+    DataDetalle,
+    getDataPeli,
+    DataPeli
 
   };
 };

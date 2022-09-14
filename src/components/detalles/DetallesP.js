@@ -37,7 +37,7 @@ const Detalles = () => {
 
     
       <Button variant="primary" href="/planetas">Volver</Button>
-      
+      <div className='todo'>
       <div className='to'>
       
       
@@ -101,6 +101,8 @@ const Detalles = () => {
             </div>        
 ))}
 </Card>
+
+</div>
 <Card>
   
 </Card>

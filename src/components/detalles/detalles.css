@@ -16,10 +16,15 @@
 
 .to {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 1%;
     align-items: center;
     width: 60%;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
 }
 
 .subcolumns {

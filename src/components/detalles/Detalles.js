@@ -10,8 +10,8 @@ import './detalles.css';
 
 
 const Detalles = () => {
-  const { getAllPerson , dataPeople , getDatallePersonaje, DataDetalle } = UsePerson();
-  const {  } = UsePlanet();
+  const { getAllPerson , dataPeople , getDatallePersonaje, DataDetalle, getDataPeli, DataPeli } = UsePerson();
+  const { } = UsePlanet();
 
 
   const params = useParams();
@@ -28,11 +28,11 @@ const Detalles = () => {
 
   const filtro = dataPeople.filter((filtrar) => filtrar.name === nombre);
 
-  const maping3 = filtro.map((persons) => persons.homeworld);
+  const maping3 = filtro.map((persona) => persona.homeworld);
   var homeWorld = maping3[0];
-  console.log(homeWorld);
+  // console.log(homeWorld);
   getDatallePersonaje(homeWorld);
-  console.log(DataDetalle.name);
+    // console.log(DataDetalle.name);
 
   return (
     <>
@@ -40,6 +40,9 @@ const Detalles = () => {
     
       <Button variant="primary" href="/personajes">Volver</Button>
       
+    <div className='todo'>
+
+
       <div className='to'>
       
       
@@ -111,12 +114,18 @@ const Detalles = () => {
 </Card>
 
       </div>
-    
+      </div>
     
     
 
      
       </div>
+
+      <div style={{
+        display:"flex",
+        justifyContent:"space-evenly"
+
+      }}>
       <Card style={{
           width:"18rem",
           border:"solid 3px #FFFF00",
@@ -129,12 +138,52 @@ const Detalles = () => {
           <div key={persona.name}>
           <div>
             <h4 className="title2" >Peliculas:</h4>
-            <h5 className="title" >{persona.films}</h5>
+            <h5 className="title">{persona.films}</h5>
           </div>
           </div>
          ))}
 
 </Card> 
+
+<Card style={{
+          width:"18rem",
+          border:"solid 3px #FFFF00",
+          background:"black",
+          borderRadius:"33px",
+        }}
+        className="m2 text-center">
+
+         {filtro.map((persona) => ( 
+          <div key={persona.name}>
+          <div>
+            <h4 className="title2" >Vehiculos:</h4>
+            <h5 className="title">{persona.vehicles}</h5>
+          </div>
+          </div>
+         ))}
+
+</Card>
+
+<Card style={{
+          width:"18rem",
+          border:"solid 3px #FFFF00",
+          background:"black",
+          borderRadius:"33px",
+        }}
+        className="m2 text-center">
+
+         {filtro.map((persona) => ( 
+          <div key={persona.name}>
+          <div>
+            <h4 className="title2" >Naves:</h4>
+            <h5 className="title">{persona.starships}</h5>
+          </div>
+          </div>
+         ))}
+
+</Card>
+</div> 
+
 
     </>
    
