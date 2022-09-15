@@ -2,8 +2,7 @@ import React from 'react';
 import './Personajes.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 import { ListGroup } from "react-bootstrap";
 
 
@@ -34,7 +33,7 @@ export const Tarjeta = ({
   
     <div className="d-flex flex-wrap"  style={{ justifyContent:'center'}}>
   
-  <Card style={{ width: '25rem', margin:'1%'}}>
+  <Card style={{ width: '25rem', margin:'1%', textAlign:"center"}}>
     <Card.Title>{nombre}</Card.Title>
     
       <Card.Img variant="top" src={f1}  />
@@ -82,7 +81,10 @@ export const Tarjeta = ({
     <br></br>
 
     <Link to={`/detalles/${nombre}/${num}`} key={keyName}>
-    <Button variant="primary"><p>Ver mas</p>{nombre}</Button>
+    <Button variant="primary" style={{
+          width: "-webkit-fill-available",
+          textAlign:"center"
+    }}><p>Ver mas de {nombre}</p></Button>
     </Link>
       </Card.Body>
     </Card>

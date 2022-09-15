@@ -103,9 +103,6 @@ const Detalles = () => {
 </Card>
 
 </div>
-<Card>
-  
-</Card>
       </div>
     
     
@@ -113,6 +110,55 @@ const Detalles = () => {
 
      
       </div>
+      <div style={{
+        display:"flex",
+        justifyContent:"space-evenly"
+
+      }}>
+      <Card style={{
+          width:"18rem",
+          border:"solid 3px #FFFF00",
+          background:"black",
+          borderRadius:"33px",
+          paddingLeft:"2%",
+          paddingRight:"2%"
+        }}
+        className="m2 text-center">
+
+         {filtro.map((persona) => ( 
+          <div key={persona.name}>
+          <div>
+            <h4 className="title2" >Peliculas:</h4>
+            <h5 className="title">{persona.films}</h5>
+          </div>
+          </div>
+         ))}
+
+</Card> 
+
+<Card style={{
+          width:"40rem",
+          border:"solid 3px #FFFF00",
+          background:"black",
+          borderRadius:"33px",
+          paddingLeft:"2%",
+          paddingRight:"2%"
+        }}
+        className="m2 text-center">
+
+         {filtro.map((persona) => ( 
+          <div key={persona.name}>
+          <div>
+            <h4 className="title2" >Residentes:</h4>
+            <h5 className="title">{persona.residents}</h5>
+          </div>
+          </div>
+         ))}
+
+</Card>
+
+
+</div> 
     </>
    
   )

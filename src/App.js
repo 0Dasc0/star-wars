@@ -16,7 +16,7 @@ function App() {
 
       <Navbarc/>
       <Routes>
-        <Route path='/home' element={<Home/>} />
+        <Route path='/' element={<Home/>} />
         <Route path='/personajes' element={<Personajes/>} />
         <Route path='/planetas' element={<Planetas/>} />
         <Route path='/detalles/:nombres/:num' element={<Detalles/>} />

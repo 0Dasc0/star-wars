@@ -4,6 +4,7 @@ import {Tarjeta} from "./Personajes";
 import f1 from '../../assets/images/star_1.jpg';
 import next from '../../assets/images/next.png';
 import back from '../../assets/images/previous.png';
+import './Personajes.css';
 
 
 const CardApp = () =>{
@@ -18,7 +19,10 @@ const CardApp = () =>{
     <div>
       
       
-      <h1 style={{textAlign:"center", textShadow:"0 0 4px #FFE919", fontWeight:"bolder", fontSize:"xxx-large"}}>Listado de Personajes</h1>
+      <h1 style={{
+        textAlign:"center", textShadow:"0 0 4px #FFE919", fontWeight:"bolder", fontSize:"xxx-large"
+        }}
+        >Listado de Personajes</h1>
       <div className="d-flex justify-content-center flex-wrap container-fluid">
       {dataPeople.map((person) =>(
           <Tarjeta

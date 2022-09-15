@@ -1,6 +1,3 @@
-* {
-    text-align: justify;
-}
 
 .title {
     color: white;
@@ -10,9 +7,6 @@
     color: #ffff00bb;
 }
 
-.Card {
-  
-}
 
 .to {
     display: flex;

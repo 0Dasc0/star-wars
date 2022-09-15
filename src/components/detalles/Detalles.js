@@ -131,6 +131,8 @@ const Detalles = () => {
           border:"solid 3px #FFFF00",
           background:"black",
           borderRadius:"33px",
+          paddingLeft:"2%",
+          paddingRight:"2%"
         }}
         className="m2 text-center">
 
@@ -150,6 +152,8 @@ const Detalles = () => {
           border:"solid 3px #FFFF00",
           background:"black",
           borderRadius:"33px",
+          paddingLeft:"2%",
+          paddingRight:"2%"
         }}
         className="m2 text-center">
 
@@ -169,6 +173,8 @@ const Detalles = () => {
           border:"solid 3px #FFFF00",
           background:"black",
           borderRadius:"33px",
+          paddingLeft:"2%",
+          paddingRight:"2%"
         }}
         className="m2 text-center">
 
